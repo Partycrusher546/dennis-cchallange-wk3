@@ -22,11 +22,11 @@ window.onload = () => {
 		.then((response) => response.json())
 		//.then to handle async and promise from the server
 		.then((data) => {
-			// first movie should start from the first data in the array
+			
 			const firstMovie = data[0];
-			// get the number of remaining tickets to sell from subtracting capacity - tickets_sold
+			
 			let remainingTickets = firstMovie.capacity - firstMovie.tickets_sold;
-			// manipulate the HTML from the JavaScript side by targeting the IDs
+			
 
 			title.innerHTML = `${firstMovie.title}`;
 			runtime.innerHTML = `${firstMovie.runtime}`;
