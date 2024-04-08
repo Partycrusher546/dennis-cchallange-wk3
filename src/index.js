@@ -1,6 +1,6 @@
 // Your code here
 const myGetRequest = new Request('http://localhost:3000/films');
-// DOM manipulation
+
 const title = document.getElementById('title');
 const runtime = document.getElementById('runtime');
 const filmInfo = document.getElementById('film-info');
@@ -13,14 +13,14 @@ const subtitle = document.getElementById('subtitle');
 const showing = document.getElementById('showing');
 const body = document.getElementsByTagName('body')[0]; 
 
-
-
 window.onload = () => {
-	// fetch details from the server
+	
+
+
 	fetch(myGetRequest)
-		//JSONIFY the response
+		
 		.then((response) => response.json())
-		//.then to handle async and promise from the server
+		
 		.then((data) => {
 			
 			const firstMovie = data[0];
@@ -49,9 +49,9 @@ window.onload = () => {
 					buyTicket.innerHTML = `Sold out!`;
 				}
 			});
-			// remove the first movie so as to proceed adding the rest
+			
 			films.innerHTML = '';
-			// forEach to add the movies one by  one, just like a for loop
+			
 			data.forEach((movie, index) => {
 				
 				const li = document.createElement('li');
@@ -71,8 +71,7 @@ window.onload = () => {
                 
 
 				li.addEventListener('mouseout', () => {
-					li.style.color = 'black';
-				});
+					li.style.color = 'black';});
 				
 				deleteButton.addEventListener('click', () => {
 					
@@ -81,8 +80,7 @@ window.onload = () => {
 						data.splice(index, 1);
 						
 						films.removeChild(li);
-					}
-				});
+					}});
 				
 				li.addEventListener('click', () => {
 					remainingTickets = movie.capacity - movie.tickets_sold;
@@ -93,7 +91,5 @@ window.onload = () => {
 					ticketNum.innerHTML = `${remainingTickets}`;
 					buyTicket.innerHTML = 'Buy ticket';
 					poster.src = `${movie.poster}`;
-				});
-			});
-		});
+				});	});});
 };
