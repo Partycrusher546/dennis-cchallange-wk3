@@ -53,23 +53,23 @@ window.onload = () => {
 			films.innerHTML = '';
 			// forEach to add the movies one by  one, just like a for loop
 			data.forEach((movie, index) => {
-				// create a list to display all the movies
+				
 				const li = document.createElement('li');
-				// dynamically show the movie titles
+
 				li.innerHTML = `${movie.title}`;
-				// append the new list to the films ID on the HTML
+				
 				films.appendChild(li);
 				//  button to delete  movie
 				const deleteButton = document.createElement('button');
 				deleteButton.innerHTML = 'Delete';
 				
 				deleteButton.classList.add('ui', 'button');
-				
+                
 				deleteButton.style.marginLeft = '5px';
-				
-				li.appendChild(deleteButton);
 
-				
+				li.appendChild(deleteButton);
+                
+
 				li.addEventListener('mouseout', () => {
 					li.style.color = 'black';
 				});
