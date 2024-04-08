@@ -73,8 +73,7 @@ window.onload = () => {
 				li.addEventListener('mouseout', () => {
 					li.style.color = 'black';
 				});
-				// delete button for each movie
-				//only delete when user confirms/selects okay
+				
 				deleteButton.addEventListener('click', () => {
 					
 					if (window.confirm('Are you sure you want to delete this movie?')) {
