@@ -84,7 +84,7 @@ window.onload = () => {
 						films.removeChild(li);
 					}
 				});
-				// when a user selects a certain movie, update the rest of the data e.g description accordingly and dynamically
+				
 				li.addEventListener('click', () => {
 					remainingTickets = movie.capacity - movie.tickets_sold;
 					title.innerHTML = `${movie.title}`;
