@@ -14,7 +14,7 @@ const showing = document.getElementById('showing');
 const body = document.getElementsByTagName('body')[0]; 
 
 
-// On full load, the first movie should 
+
 window.onload = () => {
 	// fetch details from the server
 	fetch(myGetRequest)
@@ -35,16 +35,16 @@ window.onload = () => {
 			ticketNum.innerHTML = `${remainingTickets}`;
 			buyTicket.innerHTML = 'Buy ticket';
 			poster.src = `${firstMovie.poster}`;
-			// eventlistener for clicking the buy ticket button
+			
 			buyTicket.addEventListener('click', () => {
-				// check if the remaining tickets are more than 0, then start subtracting
+				
 				if (remainingTickets > 0) {
-					// -- to deduct
+					
 					remainingTickets--;
-					// display dynamically on the html
+					
 					ticketNum.innerHTML = `${remainingTickets}`;
 				} else if (remainingTickets === 0) {
-					// once tickets remaining are 0, show a sold out on the button and disable buying more tickets
+					
 					ticketNum.innerHTML = `${remainingTickets}`;
 					buyTicket.innerHTML = `Sold out!`;
 				}
