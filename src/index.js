@@ -68,20 +68,16 @@ window.onload = () => {
 				deleteButton.style.marginLeft = '5px';
 
 				li.appendChild(deleteButton);
-                
-
-				li.addEventListener('mouseout', () => {
+                li.addEventListener('mouseout', () => {
 					li.style.color = 'black';});
 				
 				deleteButton.addEventListener('click', () => {
-					
 					if (window.confirm('Are you sure you want to delete this movie?')) {
 		
 						data.splice(index, 1);
 						
 						films.removeChild(li);
 					}});
-				
 				li.addEventListener('click', () => {
 					remainingTickets = movie.capacity - movie.tickets_sold;
 					title.innerHTML = `${movie.title}`;
