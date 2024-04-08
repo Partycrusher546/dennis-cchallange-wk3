@@ -59,17 +59,17 @@ window.onload = () => {
 				li.innerHTML = `${movie.title}`;
 				// append the new list to the films ID on the HTML
 				films.appendChild(li);
-				// add a button to delete each movie
+				//  button to delete  movie
 				const deleteButton = document.createElement('button');
 				deleteButton.innerHTML = 'Delete';
-				// add class using JS
+				
 				deleteButton.classList.add('ui', 'button');
-				// add space/style using css but on JS
+				
 				deleteButton.style.marginLeft = '5px';
-				// append the new button on the HTML
+				
 				li.appendChild(deleteButton);
 
-				// when one isn't hovering the movie name, return to default color
+				
 				li.addEventListener('mouseout', () => {
 					li.style.color = 'black';
 				});
