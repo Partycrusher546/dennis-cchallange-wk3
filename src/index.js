@@ -63,7 +63,7 @@ window.onload = () => {
         });
 
         deleteButton.addEventListener("click", () => {
-          if (window.confirm("Are you sure you want to delete this movie?")) {
+          if (window.confirm(`Are you sure you want to delete ${movie.title}`)) {
             data.splice(index, 1);
 
             films.removeChild(li);
